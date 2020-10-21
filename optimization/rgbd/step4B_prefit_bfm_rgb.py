@@ -42,7 +42,7 @@ sys.path.append("../..")
 from RGBD_load import RGBD_load
 from utils.render_img import render_img_in_different_pose
 from utils.compute_loss import compute_loss
-from utils.ply import write_ply, write_obj
+from third_party.ply import write_ply, write_obj
 
 from utils.basis import load_3dmm_basis, load_3dmm_basis_bfm
 

@@ -1,0 +1,27 @@
+
+In my cae, the tensorflow_framework library file's name was not libtensorflow_framework.so but libtensorflow_framework.so.1. The tensorflow version is 1.15.0.
+
+I just made symbolic link for it and the problem has gone.
+
+$ cd /anaconda3/envs/3dface/lib/python3.6/site-packages/tensorflow_core
+$ ln -s libtensorflow_framework.so.1 libtensorflow_framework.so
+
+
+./optimization/rgbd/step2_sparse_fusion.py
+from utils.ply import write_ply, write_obj ----> from third_party.ply import write_ply, write_obj
+
+
+
+./optimization/rgbd/step3_prefit_shape.py
+from utils.ply import write_ply ----> from third_party.ply import write_ply
+
+
+./optimization/rgbd/step4B_prefit_bfm_rgb.py
+from utils.ply import write_ply, write_obj ----> from third_party.ply import write_ply, write_obj
+
+
+
+sh run_opt_rgbd.sh   --->   bash run_opt_rgbd.sh      
+
+### sh command causes problems when encounter [ symbol or == in the .sh file.
+
